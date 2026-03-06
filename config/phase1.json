@@ -1,0 +1,74 @@
+{
+    "name": "default",
+    "n_gpu": 1,
+    "module": "phase1",
+    "data_loader": {
+        "type": "WithGroundTruthDataLoader",
+        "args": {
+            "data_dir": "data/train",
+            "batch_size": 16,
+            "shuffle": true,
+            "validation_split": 0.00,
+            "num_workers": 16
+        }
+    },
+    "valid_data_loader": {
+        "type": "WithGroundTruthDataLoader",
+        "args": {
+            "data_dir": "data/test",
+            "batch_size": 8,
+            "shuffle": false,
+            "validation_split": 0.00,
+            "num_workers": 8
+        }
+    },
+    "model": {
+        "type": "DefaultModel",
+        "args": {
+            "dim": 16
+        }
+    },
+    "loss": {
+        "type": "l1_and_perceptual",
+        "args": {
+            "l1_loss_lambda": 10,
+            "perceptual_loss_lambda": 0.05
+        }
+    },
+    "metrics": {
+        "S0": [
+            "psnr",
+            "ssim"
+        ]
+    },
+    "optimizer": {
+        "type": "Adam",
+        "args": {
+            "lr": 0.01,
+            "betas": [
+                0.5,
+                0.999
+            ],
+            "weight_decay": 0,
+            "amsgrad": true
+        }
+    },
+    "lr_scheduler": {
+        "type": "MultiplicativeLR",
+        "args": {
+            "lr_lambda_tag": "default"
+        }
+    },
+    "trainer": {
+        "type": "DefaultTrainer",
+        "args": {
+            "epochs": 300,
+            "save_dir": "saved_phase1",
+            "save_period": 10,
+            "verbosity": 2,
+            "monitor": "off",
+            "tensorboardX": true,
+            "log_dir": "saved_phase1/runs"
+        }
+    }
+}
