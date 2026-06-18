@@ -69,7 +69,15 @@ Note that all config files (`config/*.json`) and the learning rate schedule func
 ## Citation
 If you find this work helpful to your research, please cite:
 ```
-
+@article{zhou2026towards,
+  title={Towards a unified complementary fusion framework for robust polarimetric imaging},
+  author={Zhou, Chu and Liu, Yixing and Teng, Minggui and Xu, Chao and Shi, Boxin and Sato, Imari},
+  journal=TPAMI,
+  volume={48},
+  number={7},
+  pages={7720--7734},
+  year={2026}
+}
 ```
 and also our NeurIPS conference version:
 ```
