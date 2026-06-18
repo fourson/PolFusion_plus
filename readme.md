@@ -3,7 +3,7 @@
 By [Chu Zhou](https://fourson.github.io/), Yixing Liu, Minggui Teng, Chao Xu, [Boxin Shi](http://ci.idm.pku.edu.cn/), [Imari Sato](https://research.nii.ac.jp/pbv/)
 ![FusionScheme](FusionScheme.png)
 
-[PDF]() | [SUPP]()
+[PDF](https://ieeexplore.ieee.org/stamp/stamp.jsp?tp=&arnumber=11397831) | [SUPP](https://ieeexplore.ieee.org/ielx8/34/11552636/11397831/supp1-3665927.pdf?arnumber=11397831)
 
 This is the extended journal version of our NeurIPS 2024 paper: [Quality-Improved and Property-Preserved Polarimetric Imaging via Complementarily Fusing](https://github.com/fourson/Quality-Improved-and-Property-Preserved-Polarimetric-Imaging-via-Complementarily-Fusing)
 
